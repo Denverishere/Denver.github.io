@@ -111,7 +111,7 @@
         </extension>
         <extension point="xbmc.addon.metadata">
             <summary>Denver JioTV Repository for Kodi</summary>
-            <description>A Repository for Streaming JioTV Plus on Smart TV & Mobile phone.</description>
+            <description>A Repository for Streaming JioTV Plus on Smart TV and Mobile phone.</description>
             <platform>all</platform>
             <assets>
                 <icon>icon.png</icon>
