@@ -1,0 +1,17 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-MEDIA-SEQUENCE:45
+#EXT-X-ALLOW-CACHE:YES
+#EXT-X-TARGETDURATION:11
+#EXTINF:10.560044,
+https://ardinesh-pc-remote.puspas.com.np/live-tv/wtc05/live/wtc05-universal/star-sports-tamil/index.ts
+#EXTINF:10.319878,
+https://ardinesh-pc-remote.puspas.com.np/live-tv/wtc05/live/wtc05-universal/star-sports-tamil/index.ts
+#EXTINF:10.319911,
+https://ardinesh-pc-remote.puspas.com.np/live-tv/wtc05/live/wtc05-universal/star-sports-tamil/index.ts
+#EXTINF:8.879922,
+http://pxy.proxytx.cloud:80/play/live.php?mac=00:1A:79:74:6A:13&stream=1097664&extension=m3u8&play_token=join@DenverIsAlivee
+#EXTINF:10.319889,
+https://ardinesh-pc-remote.puspas.com.np/live-tv/wtc05/live/wtc05-universal/star-sports-tamil/index.ts
+#EXTINF:10.319878,
+https://ardinesh-pc-remote.puspas.com.np/live-tv/wtc05/live/wtc05-universal/star-sports-tamil/index.ts
