@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://denverlink.pages.dev/TP/css/bootstrap-reboot.min.css"/>
+	<link rel="stylesheet" href="https://denverlink.pages.dev/TP/css/bootstrap-grid.min.css"/>
+	<link rel="stylesheet" href="https://denverlink.pages.dev/TP/css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="https://denverlink.pages.dev/TP/css/slider-radio.css"/>
+	<link rel="stylesheet" href="https://denverlink.pages.dev/TP/css/select2.min.css"/>
+	<link rel="stylesheet" href="https://denverlink.pages.dev/TP/css/magnific-popup.css"/>
+	<link rel="stylesheet" href="https://denverlink.pages.dev/TP/css/main.css"/>
+	<link rel="shortcut icon" href="https://denverlink.pages.dev/TP/favicon.ico"/>
+	<title>Willow</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.postimg.cc/8cpdTS4V/image.jpg">
+    <link rel="stylesheet" href="Player.css">
+    	<link rel="stylesheet" href="guide.css">
+</head>
+<body>
+		<br>
+			<script src="https://denverlink.pages.dev/TP/js/jquery-3.5.1.min.js"></script>
+<script src="https://denverlink.pages.dev/TP/js/bootstrap.bundle.min.js"></script>
+<script src="https://denverlink.pages.dev/TP/js/owl.carousel.min.js"></script>
+<script src="https://denverlink.pages.dev/TP/js/slider-radio.js"></script>
+<script src="https://denverlink.pages.dev/TP/js/select2.min.js"></script>
+<script src="https://denverlink.pages.dev/TP/js/smooth-scrollbar.js"></script>
+<script src="https://denverlink.pages.dev/TP/js/jquery.magnific-popup.min.js"></script>
+<script src="https://denverlink.pages.dev/TP/js/main.js"></script>
+
+    <img src="https://i.postimg.cc/yxYMFytg/logo.png" hieght="80" width="30" alt="DenverSports" />
+		
+		<script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+<script>
+		<script type="text/javascript">jwplayer.key = 'Khpp2dHxlBJHC8MCmLnBuV2jK/DwDnJMniwF6EO9HC/riJ712ZmbHg==';</script>
+		<br>
+			<br>
+				<br>
+		<div class="player-container">
+			
+        <div style="margin: 12px;"  id="player"></div>
+    </div>
+		
+		<script>
+const playerInstance = jwplayer("player").setup({
+    controls: true,
+    sharing: true,
+    displaytitle: true,
+    autoplay: true,
+    preload: "none",
+    repeat: true,
+    volume: 100,
+    mute: false,
+    stretching: "exactfit",
+    width: "100%",
+    cast: {},
+    displaydescription: true,
+    abouttext: "Denver JW Player",
+    aboutlink: "https://t.me/Denver1769",
+
+    skin: {
+        name: "netflix"
+    },
+
+    logo: {
+        file: "",
+        link: "https://t.me/Denver1769"
+    },
+
+    captions: {
+        color: "#FFF",
+        fontSize: 14,
+        backgroundOpacity: 0,
+        edgeStyle: "raised"
+    },
+
+    playlist: [
+        {
+            title: "Willow Cricket Hindi",
+            description: "You're Watching",
+            image: "https://i.postimg.cc/8cpdTS4V/image.jpg", // Assuming no specific image, using channel name instead
+            sources: [
+                {
+                    file: "https://zerotoone.com.br/wp-content/plugins/super-links/application/helpers/super-links-proxy.php/https://dfwlive-v1-c1p3-sponsored.s.llnwi.net/Content/HLS.cps/Live/channel(WILLXT-3292.dfw.1080)/index.m3u8",
+                    type: "dash",
+                    label: "1080p",
+                    default: true,
+                    drm: { 
+                        "clearkey": {  
+                            "keyId": "1f52934d28a25c51a5dd577a650dcece",
+                            "key": "323a46b02a31172c2475406e56fd3be6" 
+                        } 
+                    }
+                }
+            ]
+        }
+    ],
+    advertising: {
+        client: "vast",
+        schedule: [
+            {
+                offset: "pre",
+                tag: ""
+            }
+        ]
+    }
+});
+
+playerInstance.on("ready", function () {
+    const playerContainer = playerInstance.getContainer();
+    const buttonContainer = playerContainer.querySelector(".jw-button-container");
+    const spacer = buttonContainer.querySelector(".jw-spacer");
+    const timeSlider = playerContainer.querySelector(".jw-slider-time");
+    buttonContainer.replaceChild(timeSlider, spacer);
+
+    playerInstance.on("adBlock", () => {
+        const modal = document.querySelector("div.modal");
+        modal.style.display = "flex";
+
+        document.getElementById("close").addEventListener("click", () => location.reload());
+    });
+
+    const rewindContainer = playerContainer.querySelector(".jw-display-icon-rewind");
+    const forwardContainer = rewindContainer.cloneNode(true);
+    const forwardDisplayButton = forwardContainer.querySelector(".jw-icon-rewind");
+    forwardDisplayButton.style.transform = "scaleX(-1)";
+    forwardDisplayButton.ariaLabel = "Forward 10 Seconds";
+    const nextContainer = playerContainer.querySelector(".jw-display-icon-next");
+    nextContainer.parentNode.insertBefore(forwardContainer, nextContainer);
+
+    playerContainer.querySelector(".jw-display-icon-next").style.display = "none";
+    const rewindControlBarButton = buttonContainer.querySelector(".jw-icon-rewind");
+    const forwardControlBarButton = rewindControlBarButton.cloneNode(true);
+    forwardControlBarButton.style.transform = "scaleX(-1)";
+    forwardControlBarButton.ariaLabel = "Forward 10 Seconds";
+    rewindControlBarButton.parentNode.insertBefore(forwardControlBarButton, rewindControlBarButton.nextElementSibling);
+
+    [forwardDisplayButton, forwardControlBarButton].forEach((button) => {
+        button.onclick = () => {
+            playerInstance.seek(playerInstance.getPosition() + 10);
+        };
+    });
+});
+</script>
+ <br>
+ 	 <br>
+ 	 <br>
+    <div class="button-container">
+        <button class="telegram-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo" class="telegram-logo">
+            Join Telegram
+        </button>
+    </div>
+
+</body>
+    </html>
